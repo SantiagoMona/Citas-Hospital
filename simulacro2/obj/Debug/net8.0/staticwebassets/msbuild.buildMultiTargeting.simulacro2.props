@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\simulacro2.props" />
+</Project>
