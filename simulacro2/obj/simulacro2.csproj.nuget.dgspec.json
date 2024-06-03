@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\simulacro2.csproj": {}
+    "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\Citas-Hospital\\simulacro2\\simulacro2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\simulacro2.csproj": {
+    "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\Citas-Hospital\\simulacro2\\simulacro2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\simulacro2.csproj",
+        "projectUniqueName": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\Citas-Hospital\\simulacro2\\simulacro2.csproj",
         "projectName": "simulacro2",
-        "projectPath": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\simulacro2.csproj",
+        "projectPath": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\Citas-Hospital\\simulacro2\\simulacro2.csproj",
         "packagesPath": "C:\\Users\\Santiago Mona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\obj\\",
+        "outputPath": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\Citas-Hospital\\simulacro2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Santiago Mona\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Santiago Mona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
