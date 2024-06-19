@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\simulacro2.csproj": {}
+    "/home/riwip5-038/Desktop/SANTIAGO MONA/Citas-Hospital/simulacro2/simulacro2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\simulacro2.csproj": {
+    "/home/riwip5-038/Desktop/SANTIAGO MONA/Citas-Hospital/simulacro2/simulacro2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\simulacro2.csproj",
+        "projectUniqueName": "/home/riwip5-038/Desktop/SANTIAGO MONA/Citas-Hospital/simulacro2/simulacro2.csproj",
         "projectName": "simulacro2",
-        "projectPath": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\simulacro2.csproj",
-        "packagesPath": "C:\\Users\\Santiago Mona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Santiago Mona\\Desktop\\Proyectos\\simulacro2\\obj\\",
+        "projectPath": "/home/riwip5-038/Desktop/SANTIAGO MONA/Citas-Hospital/simulacro2/simulacro2.csproj",
+        "packagesPath": "/home/riwip5-038/.nuget/packages/",
+        "outputPath": "/home/riwip5-038/Desktop/SANTIAGO MONA/Citas-Hospital/simulacro2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Santiago Mona\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/riwip5-038/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,17 +32,16 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "MailerSend.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.5, )"
@@ -55,9 +54,17 @@
               "target": "Package",
               "version": "[8.0.2, )"
             },
+            "SlackAPI": {
+              "target": "Package",
+              "version": "[1.1.14, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Net.Http.json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -79,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
