@@ -4,9 +4,11 @@ using simulacro2.Services.Especialidades;
 using simulacro2.Services.Pacientes;
 using simulacro2.Services.Medicos;
 using simulacro2.Services.Citas;
-using simulacro2.Services.Slack;
+
 using MailerSend.AspNetCore;
 using simulacro2.Models;
+
+using simulacro2.Services.MailSend;
 
 
 
@@ -35,8 +37,11 @@ builder.Services.AddScoped<IMedicosRepository, MedicosRepository>();
 builder.Services.AddScoped<ICitasRepository, CitasRepository>();
 
 // envio de correo - registro de interfaces
-builder.Services.AddScoped<ISlackRepository,SlackRepository>();
-builder.Services.Configure<MailerSendOptionss>(builder.Configuration.GetSection("Mailsend"));
+
+builder.Services.AddScoped<IEmailSender,EmailSender>();
+builder.Services.AddHttpClient<IEmailSender,EmailSender>();
+
+builder.Services.Configure<MailerSendOptionss>(builder.Configuration.GetSection("Mailersend"));
 
 
 var app = builder.Build();

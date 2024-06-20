@@ -12,6 +12,7 @@ namespace simulacro2.Services.MailSend
         private readonly string? _ApiUrl; // LINK DE LA API
         private readonly string? _ApiKey; // TOKEN
         private readonly string? _FromEmail; // CORREO DESDE DONDE SE ENVIA 
+
         public EmailSender(HttpClient httpClient,IConfiguration configuration){
             _httpClient = httpClient;
             _ApiUrl = configuration["MailerSend:ApiUrl"];
@@ -21,27 +22,33 @@ namespace simulacro2.Services.MailSend
         }
         public async Task<string> SendEmailAsync(string info, string toEmail)
         {
-            var request = new 
-            {
-                email = _FromEmail,// se le ingresa el correo que ya tenemos configuarados en el JSON
-                to = new {email = toEmail}, // este es a quien se le va a enviar el correo 
+            var request = new {
+                from = new {email = _FromEmail} ,// se le ingresa el correo que ya tenemos configuarados en el JSON
+                to = new[] {new {email = toEmail}} , // este es a quien se le va a enviar el correo 
                 subject = "Este es un correo" ,// asunto 
                 text = "envio de correo de prueba"    // 
             };
             // configuracion de token 
             _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _ApiKey);
-            try
+
+            try{
+
+                // se solicita una peticion http tipo post y se le envia la informacion que se obtuvo en el request
+                var response = await _httpClient.PostAsJsonAsync("https://api.mailersend.com/v1/email",request); 
+
+                // se verifica si la respuesta fue exitosa
+                //response.EnsureSuccessStatusCode(); 
+                Console.WriteLine("Vamoa enviar un correo!!!!");
+                return $"se ha enviado con exito a {request}";
+            }catch (HttpRequestException ex)
             {
-                var response = await _httpClient.PostAsJsonAsync(_ApiUrl,request); // se solicita una peticion http tipo post y se le envia la informacion que se obtuvo en el request
-                response.EnsureSuccessStatusCode(); // se verifica si la respuesta fue exitosa
-                return $"se ha enviado con exito a {request.email}";
-            }
-            catch (HttpRequestException ex)
-            {
-                return $"Error al enviar correo: {ex.Message}";
-                throw new ApplicationException("Error al tratar de enviar el correo");
+                Console.WriteLine("Estamos saltando acá!!!");
+                return $"Error al enviar correo___HERE !!: {ex.Message}";
+                throw new ApplicationException("errorrr perrroror");
             }
             
         }
+
+        
     }
 }
